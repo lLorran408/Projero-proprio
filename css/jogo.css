@@ -1,0 +1,43 @@
+/* body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    margin: 20px;
+} */
+
+h1 {
+    color: #38761d; /* Verde escuro */
+}
+
+#gameCanvas {
+    /* O palco do jogo */
+    border: 5px solid #38761d;
+    background-color: #a9d18e; /* Fundo do tabuleiro */
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+#score {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #cc0000; /* Vermelho para a maçã/pontuação */
+}
+
+#startButton {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #f7941d; /* Laranja */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#startButton:hover {
+    background-color: #e6830c;
+}
+#s
