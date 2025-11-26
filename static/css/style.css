@@ -1,5 +1,5 @@
 body {
-    background-image: url('/imagens/plano\ de\ fundo\ pagina\ 1.png');
+    background-image: url('/static/imagens/fundo.png');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;

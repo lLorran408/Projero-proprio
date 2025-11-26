@@ -1,0 +1,43 @@
+{% extends "_modelo.html" %}
+
+{% block content %} 
+
+        <h1>🐍 Jogo da Cobrinha 🍎</h1>
+
+        <div id="score">Pontuação: 0</div>
+
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+        <button class="d-block mx-auto" id="startButton">Começar Jogo</button>
+
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" id="startButton">
+            como jogar
+        </button>
+        </div>
+
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">tutorial</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <h3>movimentação <a style="color: blue;"> <i class="bi bi-arrow-left"></i> <i class="bi bi-arrow-up"></i> <i
+                                class="bi bi-arrow-right"></i> <i class="bi bi-arrow-down"></a></i> Enter reset<a style="color: red;"><i
+                                class="bi bi-arrow-counterclockwise"></i></a> </h3>
+
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                    <script src="/static/js/jogo.js"></script>
+{% endblock %}
+ 

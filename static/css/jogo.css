@@ -40,3 +40,8 @@ color:  #cc0000; /* Vermelho para a maçã/pontuação */
 #startButton:hover {
     background-color: #e6830c;
 }
+
+.avatar-sm {
+    width: 2rem;
+    height: 2rem;
+}

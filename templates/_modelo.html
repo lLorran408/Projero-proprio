@@ -7,16 +7,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/jogo.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/jogo.css">
     <title>Snke.io</title>
-    <link rel="icon" type="image/x-icon" href="imagens/8686318.png">
+    <link rel="icon" type="image/x-icon" href="/static/imagens/8686318.png">
 </head>
 
 <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <div class="container-fluid">
-            <img src="imagens/8686318.png" alt="Logo" style="width:40px;" class="rounded-pill">
+            <img src="/static/imagens/8686318.png" alt="Logo" style="width:40px;" class="rounded-pill">
             <a class="navbar-brand" href="#">Snke.io</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -24,10 +24,14 @@
             <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/templates/index.html"> inicio</a>
+                        <a class="nav-link" href="pagina3.html"> inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pagina2.html">pagina 2</a>
+                        <a class="nav-link" href="pagina2.html">pagina+2</a>
+                    </li>
+
+                     <li class="nav-item">
+                        <a class="nav-link" href="index.html">index</a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -40,48 +44,22 @@
                     </li>
 
                 </ul>
+                <ul class="navbar-nav order-1 order-md-2">
+                        <li class="nav-item m-0 p-0 ps-4 ps-md-0">
+                            <a class="nav-link d-flex align-items-center m-0 p-0" href="/login" id="userInOutLink" title="Login pelo Google">
+                                <img src="/static/imagens/user.png" alt="Logue-se com o Google" class="rounded-circle avatar-sm">
+                                <span class="d-md-none ms-3">Login</span>
+                            </a>
+                        </li>
+                    </ul>
     </nav>
 
 
     <main class="text-center">
 
-        <h1>🐍 Jogo da Cobrinha 🍎</h1>
+{% block content %} 
 
-        <div id="score">Pontuação: 0</div>
-
-        <canvas id="gameCanvas" width="400" height="400"></canvas>
-
-        <button class="d-block mx-auto" id="startButton">Começar Jogo</button>
-
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" id="startButton">
-            como jogar
-        </button>
-        </div>
-
-        <!-- The Modal -->
-        <div class="modal" id="myModal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <h4 class="modal-title">tutorial</h4>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                    </div>
-
-                    <!-- Modal body -->
-                    <div class="modal-body">
-                        <h3>movimentação <a style="color: blue;"> <i class="bi bi-arrow-left"></i> <i class="bi bi-arrow-up"></i> <i
-                                class="bi bi-arrow-right"></i> <i class="bi bi-arrow-down"></a></i> Enter reset<a style="color: red;"><i
-                                class="bi bi-arrow-counterclockwise"></i></a> </h3>
-
-                    </div>
-
-                    <!-- Modal footer -->
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">fechar</button>
-                    </div>
-                    <script src="js/jogo.js"></script>
+{% endblock %}
 
     </main>
     <footer>
@@ -93,6 +71,11 @@
             </div>
         </footer>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.bundle.min.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/12.4.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.4.0/firebase-auth-compat.js"></script>
+    <!-- A configuração do Firebase deve ser "injetada" neste arquivo -->
+    <script src="/static/js/firebase_config.js"></script>
+    <script src="/static/js/script.js"></script>
 </body>
 
 </html>
